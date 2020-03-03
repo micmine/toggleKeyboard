@@ -1,14 +1,14 @@
 #!/bin/bash
 
 lockfile="/tmp/.toggleKeyboardlock"
-id=15
+id="AT Translated Set 2 keyboard"
 
 if [ -f "$lockfile" ]; then
   echo "enable"
-  xinput enable $id
+  xinput enable "$id"
   rm $lockfile
 else
   echo "disable"
-  xinput disable $id
+  xinput disable "$id"
   touch $lockfile
 fi
